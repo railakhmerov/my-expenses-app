@@ -1,0 +1,546 @@
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    section.cost-accounting {
+        margin-bottom: 30px;
+        .container {
+            .cost-accounting-inner {
+                display: flex;
+                justify-content: center;
+                .cost-accounting__title {
+                    margin-top: 80px;
+                    h2 {
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+
+    section.input-costs {
+        margin-bottom: 50px;
+        .container {
+            .input-costs-inner {
+                display: flex;
+                justify-content: center;
+                .input-costs__input {
+                    input {
+                        min-width: 100%;
+                        font-size: 18px;
+                    }
+                    input::placeholder {
+                        position: absolute;
+                        right: 25px;
+                        font-size: 18px;
+                    }
+                    input:focus,:active {
+                        outline: none;
+                    }
+    
+                    .input-error-text { // Текст, если пользователь ничего не введет в поле ввода
+                        p {
+                            position: absolute;
+                            color: red;
+                            font-size: 18px;
+                        }
+                    }
+                    .hidden-text {
+                        display: none;
+                    }
+                }
+                .add-costs-btn {
+                    .add-btn {
+                        height: 45px;
+                        min-width: 100%;
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.output-section {
+        .container {
+            .output-section-inner {
+                display: flex;
+                gap: 150px;
+                .output__left-side {
+                    .costs-limit {
+                        margin-bottom: 15px;
+                        .costs-limit__title {
+                            h2 {
+                                font-size: 22px;
+                                font-weight: 600;
+                                span.costs-limit {
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                    .costs-all {
+                        margin-bottom: 35px;
+                        .costs-all__title {
+                            h2 {
+                                font-size: 22px;
+                                font-weight: 600;
+                                span.costs-all__counter {
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                    .costs__status {
+                        h2 {
+                            font-size: 22px;
+                            font-weight: 600;
+                            span.cost-status {
+    
+                            }
+                            .cost-status-good { // если лимит не превышен
+                                color: green;
+                            }
+                            .cost-status-bed { // если лимит превышен
+                                color: red;
+                            }
+                        }
+                    }
+                }
+                .output__right-side {
+                    .costs-history {
+                        .costs-history__title {
+                            margin-bottom: 20px;
+                            h2 {
+                                font-size: 22px;
+                                font-weight: 600;
+                            }
+                        }
+                        .costs-history__items {
+                            position: relative;
+                            ol {
+                                position: absolute;
+                                left: 18px;
+                                li {
+                                    font-size: 20px;
+                                    list-style: decimal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    section.cost-accounting {
+        margin-bottom: 30px;
+        .container {
+            .cost-accounting-inner {
+                display: flex;
+                justify-content: center;
+                .cost-accounting__title {
+                    margin-top: 60px;
+                    h2 {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+
+    section.input-costs {
+        margin-bottom: 50px;
+        .container {
+            .input-costs-inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .input-costs__input {
+                    input {
+                        min-width: 100%;
+                        font-size: 18px;
+                    }
+                    input::placeholder {
+                        position: absolute;
+                        right: 25px;
+                        font-size: 18px;
+                    }
+                    input:focus,:active {
+                        outline: none;
+                    }
+    
+                    .input-error-text { // Текст, если пользователь ничего не введет в поле ввода
+                        p {
+                            position: absolute;
+                            color: red;
+                            font-size: 18px;
+                        }
+                    }
+                    .hidden-text {
+                        display: none;
+                    }
+                }
+                .add-costs-btn {
+                    .add-btn {
+                        height: 45px;
+                        min-width: 100%;
+                        button {
+                            min-width: 100%;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.output-section {
+        .container {
+            .output-section-inner {
+                display: flex;
+                justify-content: space-between;
+                .output__left-side {
+                    .costs-limit {
+                        margin-bottom: 15px;
+                        .costs-limit__title {
+                            h2 {
+                                font-size: 22px;
+                                span.costs-limit {
+                                }
+                            }
+                        }
+                    }
+                    .costs-all {
+                        margin-bottom: 35px;
+                        .costs-all__title {
+                            h2 {
+                                font-size: 22px;
+                                span.costs-all__counter {
+                                }
+                            }
+                        }
+                    }
+                    .costs__status {
+                        h2 {
+                            font-size: 22px;
+                            font-weight: 600;
+                            span.cost-status {
+    
+                            }
+                            .cost-status-good { // если лимит не превышен
+                                color: green;
+                            }
+                            .cost-status-bed { // если лимит превышен
+                                color: red;
+                            }
+                        }
+                    }
+                }
+                .output__right-side {
+                    .costs-history {
+                        .costs-history__title {
+                            margin-bottom: 20px;
+                            h2 {
+                                font-size: 22px;
+                                font-weight: 600;
+                            }
+                        }
+                        .costs-history__items {
+                            position: relative;
+                            ol {
+                                position: absolute;
+                                left: 18px;
+                                li {
+                                    font-size: 20px;
+                                    list-style: decimal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    section.cost-accounting {
+        margin-bottom: 30px;
+        .container {
+            .cost-accounting-inner {
+                display: flex;
+                justify-content: center;
+                .cost-accounting__title {
+                    margin-top: 60px;
+                    h2 {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+
+    section.input-costs {
+        margin-bottom: 50px;
+        .container {
+            .input-costs-inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .input-costs__input {
+                    input {
+                        min-width: 100%;
+                        font-size: 18px;
+                    }
+                    input::placeholder {
+                        position: absolute;
+                        right: 25px;
+                        font-size: 18px;
+                    }
+                    input:focus,:active {
+                        outline: none;
+                    }
+    
+                    .input-error-text { // Текст, если пользователь ничего не введет в поле ввода
+                        p {
+                            position: absolute;
+                            color: red;
+                            font-size: 18px;
+                        }
+                    }
+                    .hidden-text {
+                        display: none;
+                    }
+                }
+                .add-costs-btn {
+                    .add-btn {
+                        height: 45px;
+                        min-width: 100%;
+                        button {
+                            min-width: 100%;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.output-section {
+        .container {
+            .output-section-inner {
+                display: flex;
+                justify-content: space-between;
+                .output__left-side {
+                    .costs-limit {
+                        margin-bottom: 15px;
+                        .costs-limit__title {
+                            h2 {
+                                font-size: 20px;
+                                span.costs-limit {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .costs-all {
+                        margin-bottom: 35px;
+                        .costs-all__title {
+                            h2 {
+                                font-size: 20px;
+                                span.costs-all__counter {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .costs__status {
+                        h2 {
+                            font-size: 20px;
+                            span.cost-status {
+                                font-size: 20px;
+                            }
+                            .cost-status-good { // если лимит не превышен
+                                color: green;
+                            }
+                            .cost-status-bed { // если лимит превышен
+                                color: red;
+                            }
+                        }
+                    }
+                }
+                .output__right-side {
+                    .costs-history {
+                        margin-right: 25px;
+                        .costs-history__title {
+                            h2 {
+                                font-size: 20px;
+                            }
+                        }
+                        .costs-history__items {
+                            position: relative;
+                            ol {
+                                position: absolute;
+                                left: 18px;
+                                li {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    section.cost-accounting {
+        margin-bottom: 30px;
+        .container {
+            .cost-accounting-inner {
+                display: flex;
+                justify-content: center;
+                .cost-accounting__title {
+                    margin-top: 60px;
+                    h2 {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    section.input-costs {
+        margin-bottom: 50px;
+        .container {
+            .input-costs-inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .input-costs__input {
+                    input {
+                        width: 100%;
+                        font-size: 18px;
+                    }
+                    input::placeholder {
+                        position: absolute;
+                        right: 25px;
+                        font-size: 18px;
+                    }
+                    input:focus,:active {
+                        outline: none;
+                    }
+    
+                    .input-error-text { // Текст, если пользователь ничего не введет в поле ввода
+                        p {
+                            position: absolute;
+                            color: red;
+                            font-size: 18px;
+                        }
+                    }
+                    .hidden-text {
+                        display: none;
+                    }
+                }
+                .add-costs-btn {
+                    .add-btn {
+                        height: 45px;
+                        min-width: 100%;
+                        button {
+                            min-width: 100%;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.output-section {
+        .container {
+            .output-section-inner {
+                display: flex;
+                justify-content: space-between;
+                .output__left-side {
+                    .costs-limit {
+                        margin-bottom: 15px;
+                        .costs-limit__title {
+                            h2 {
+                                font-size: 18px;
+                                span.costs-limit {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                    .costs-all {
+                        margin-bottom: 35px;
+                        .costs-all__title {
+                            h2 {
+                                font-size: 18px;
+                                span.costs-all__counter {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                    .costs__status {
+                        h2 {
+                            font-size: 18px;
+                            span.cost-status {
+                                font-size: 18px;
+                            }
+                            .cost-status-good { // если лимит не превышен
+                                color: green;
+                            }
+                            .cost-status-bed { // если лимит превышен
+                                color: red;
+                            }
+                        }
+                    }
+                }
+                .output__right-side {
+                    .costs-history {
+                        .costs-history__title {
+                            h2 {
+                                font-size: 18px;
+                            }
+                        }
+                        .costs-history__items {
+                            position: relative;
+                            ol {
+                                position: absolute;
+                                left: 18px;
+                                li {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

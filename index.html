@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="scss/media.css">
+    <title>Expenses App</title>
+</head>
+<body>
+    <div class="wrapper">
+
+
+
+
+        <section class="cost-accounting">
+            <div class="container">
+                <div class="cost-accounting-inner">
+                    <div class="cost-accounting__title">
+                        <h2>Учет расходов</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="input-costs">
+            <div class="container">
+                <div class="input-costs-inner">
+                    <div class="input-costs__input">
+                        <input 
+                        class="input-cost-js" 
+                        type="number"
+                        placeholder="руб.">
+
+                        <div class="input-error-text hidden-text input-error-text-js">
+                            <p>Вы не ввели число!</p>
+                        </div>
+                    </div>
+                    <div class="add-costs-btn">
+                        <div class="add-btn">
+                            <button class="add-costs-btn-js">Добавить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="output-section">
+            <div class="container">
+                <div class="output-section-inner">
+                    <div class="output__left-side">
+                        <div class="costs-limit">
+                            <div class="costs-limit__title">
+                                <h2>Лимит: <span class="costs-limit costs-limit-js">5000</span></h2>
+                            </div>
+                        </div>
+                        <div class="costs-all">
+                            <div class="costs-all__title">
+                                <!-- Считает сумму всех трат из истории и выводит в этот блок -->
+                                <h2>Всего: <span class="costs-all__counter costs-all__counter-js">0</span></h2>
+                            </div>
+                        </div>
+                        <div class="costs__status">
+                            <h2>Статус: <span class="cost-status cost-status-good cost-status-js">Все хорошо</span></h2>
+                        </div>
+                    </div>
+                    <div class="output__right-side">
+                        <div class="costs-history">
+                            <div class="costs-history__title">
+                                <h2>История:</h2>
+                            </div>
+                            <div class="costs-history__items costs-history__items-js"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

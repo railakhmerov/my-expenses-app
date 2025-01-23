@@ -1,0 +1,145 @@
+.container {
+    width: 650px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section.cost-accounting {
+    margin-bottom: 30px;
+    .container {
+        .cost-accounting-inner {
+            .cost-accounting__title {
+                margin-top: 90px;
+                h2 {
+                    font-size: 28px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+section.input-costs {
+    margin-bottom: 50px;
+    .container {
+        .input-costs-inner {
+            display: flex;
+            gap: 10px;
+            .input-costs__input {
+                height: 45px;
+                input {
+                    padding-left: 25px;
+                    position: relative;
+                    height: 100%;
+                    width: 400px;
+                    font-size: 20px;
+                }
+                input::placeholder {
+                    position: absolute;
+                    right: 25px;
+                }
+                input:focus,:active {
+                    outline: none;
+                }
+
+                .input-error-text { // Текст, если пользователь ничего не введет в поле ввода
+                    p {
+                        position: absolute;
+                        color: red;
+                    }
+                }
+                .hidden-text {
+                    display: none;
+                }
+            }
+            .add-costs-btn {
+                .add-btn {
+                    height: 45px;
+                    max-width: 200px;
+                    button {
+                        height: 100%;
+                        width: 100%;
+                        max-width: 200px;
+                        padding: 0 50px;
+                        text-align: center;
+                        font-size: 18px;
+                        border: none;
+                        color: #fff;
+                        background-color: #0094FF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.output-section {
+    .container {
+        .output-section-inner {
+            display: flex;
+            gap: 255px;
+            .output__left-side {
+                .costs-limit {
+                    margin-bottom: 15px;
+                    .costs-limit__title {
+                        h2 {
+                            font-size: 22px;
+                            font-weight: 600;
+                            span.costs-limit {
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                .costs-all {
+                    margin-bottom: 35px;
+                    .costs-all__title {
+                        h2 {
+                            font-size: 22px;
+                            font-weight: 600;
+                            span.costs-all__counter {
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                .costs__status {
+                    h2 {
+                        font-size: 22px;
+                        font-weight: 600;
+                        span.cost-status {
+
+                        }
+                        .cost-status-good { // если лимит не превышен
+                            color: green;
+                        }
+                        .cost-status-bed { // если лимит превышен
+                            color: red;
+                        }
+                    }
+                }
+            }
+            .output__right-side {
+                .costs-history {
+                    .costs-history__title {
+                        margin-bottom: 20px;
+                        h2 {
+                            font-size: 22px;
+                            font-weight: 600;
+                        }
+                    }
+                    .costs-history__items {
+                        position: relative;
+                        ol {
+                            position: absolute;
+                            left: 18px;
+                            li {
+                                font-size: 20px;
+                                list-style: decimal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+.container {
+  width: 650px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section.cost-accounting {
+  margin-bottom: 30px;
+}
+section.cost-accounting .container .cost-accounting-inner .cost-accounting__title {
+  margin-top: 90px;
+}
+section.cost-accounting .container .cost-accounting-inner .cost-accounting__title h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+section.input-costs {
+  margin-bottom: 50px;
+}
+section.input-costs .container .input-costs-inner {
+  display: flex;
+  gap: 10px;
+}
+section.input-costs .container .input-costs-inner .input-costs__input {
+  height: 45px;
+}
+section.input-costs .container .input-costs-inner .input-costs__input input {
+  padding-left: 25px;
+  position: relative;
+  height: 100%;
+  width: 400px;
+  font-size: 20px;
+}
+section.input-costs .container .input-costs-inner .input-costs__input input::-moz-placeholder {
+  position: absolute;
+  right: 25px;
+}
+section.input-costs .container .input-costs-inner .input-costs__input input::placeholder {
+  position: absolute;
+  right: 25px;
+}
+section.input-costs .container .input-costs-inner .input-costs__input input:focus, section.input-costs .container .input-costs-inner .input-costs__input :active {
+  outline: none;
+}
+section.input-costs .container .input-costs-inner .input-costs__input .input-error-text p {
+  position: absolute;
+  color: red;
+}
+section.input-costs .container .input-costs-inner .input-costs__input .hidden-text {
+  display: none;
+}
+section.input-costs .container .input-costs-inner .add-costs-btn .add-btn {
+  height: 45px;
+  max-width: 200px;
+}
+section.input-costs .container .input-costs-inner .add-costs-btn .add-btn button {
+  height: 100%;
+  width: 100%;
+  max-width: 200px;
+  padding: 0 50px;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  color: #fff;
+  background-color: #0094FF;
+}
+
+section.output-section .container .output-section-inner {
+  display: flex;
+  gap: 255px;
+}
+section.output-section .container .output-section-inner .output__left-side .costs-limit {
+  margin-bottom: 15px;
+}
+section.output-section .container .output-section-inner .output__left-side .costs-limit .costs-limit__title h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+section.output-section .container .output-section-inner .output__left-side .costs-limit .costs-limit__title h2 span.costs-limit {
+  font-weight: 400;
+}
+section.output-section .container .output-section-inner .output__left-side .costs-all {
+  margin-bottom: 35px;
+}
+section.output-section .container .output-section-inner .output__left-side .costs-all .costs-all__title h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+section.output-section .container .output-section-inner .output__left-side .costs-all .costs-all__title h2 span.costs-all__counter {
+  font-weight: 400;
+}
+section.output-section .container .output-section-inner .output__left-side .costs__status h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+section.output-section .container .output-section-inner .output__left-side .costs__status h2 .cost-status-good {
+  color: green;
+}
+section.output-section .container .output-section-inner .output__left-side .costs__status h2 .cost-status-bed {
+  color: red;
+}
+section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__title {
+  margin-bottom: 20px;
+}
+section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__title h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__items {
+  position: relative;
+}
+section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__items ol {
+  position: absolute;
+  left: 18px;
+}
+section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__items ol li {
+  font-size: 20px;
+  list-style: decimal;
+}/*# sourceMappingURL=main.css.map */
