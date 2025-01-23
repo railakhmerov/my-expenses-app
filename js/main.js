@@ -44,10 +44,7 @@ function outputNewListExpenses() {
     let expensesListHTML = '';
 
     expenses.forEach(element => {
-        const elementHTML = `
-            <li class="costs-history__item">${element}</li>
-        `;
-        expensesListHTML += elementHTML;
+        expensesListHTML += `<li class="costs-history__item">${element}</li>`;
     });
 
     expensesHistoryNode.innerHTML = `
