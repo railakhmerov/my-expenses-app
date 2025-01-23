@@ -167,6 +167,7 @@
                 flex-direction: column;
                 justify-content: center;
                 .input-costs__input {
+                    margin-bottom: 15px;
                     input {
                         min-width: 100%;
                         font-size: 18px;
@@ -189,6 +190,7 @@
                     }
                     .hidden-text {
                         display: none;
+                        margin-bottom: 10px;
                     }
                 }
                 .add-costs-btn {

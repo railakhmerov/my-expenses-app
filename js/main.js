@@ -11,7 +11,13 @@ const expensesStatusNode = document.querySelector('.cost-status-js');
 
 addExpensesBtnNode.addEventListener('click', function() {
     // 2.Получаем значение из поля ввода
-    checkOnVoid();
+    if (!expensesInputNode.value) {
+        inputErrorTextNode.classList.remove('hidden-text'); // убираем класс и появляется текст
+        console.log('Вы не ввели число!');
+        return
+    } else {
+        inputErrorTextNode.classList.add('hidden-text'); // если user ввел число, то текст скрыт
+    };
 
     // 3.Конвертируем строку в число и сохраняем в массив
     saveValueFromInputInArray();
@@ -23,17 +29,6 @@ addExpensesBtnNode.addEventListener('click', function() {
     // 5. Выводить сумму расходов
     checkExpensesLimit();
 });
-
-function checkOnVoid() {
-    // Получаем значение из поля ввода
-    if (!expensesInputNode.value) {
-        inputErrorTextNode.classList.remove('hidden-text'); // убираем класс и появляется текст
-        console.log('Вы не ввели число!');
-        return; // тут код завершится, если условие выполнится
-    } else {
-        inputErrorTextNode.classList.add('hidden-text'); // если user ввел число, то текст скрыт
-    }
-};
 
 function saveValueFromInputInArray() {
     const expense = parseInt(expensesInputNode.value); //parseInt - конвертирует строку в число
