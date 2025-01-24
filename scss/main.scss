@@ -76,8 +76,10 @@ section.output-section {
     .container {
         .output-section-inner {
             display: flex;
-            gap: 255px;
+            justify-content: space-between;
+            gap: 50px;
             .output__left-side {
+                width: 50%;
                 .costs-limit {
                     margin-bottom: 15px;
                     .costs-limit__title {
@@ -119,6 +121,7 @@ section.output-section {
                 }
             }
             .output__right-side {
+                width: 50%;
                 .costs-history {
                     .costs-history__title {
                         margin-bottom: 20px;

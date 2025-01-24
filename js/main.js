@@ -8,7 +8,6 @@ const expensesLimitNode = document.querySelector('.costs-limit-js');
 const allExpensesCounterNode = document.querySelector('.costs-all__counter-js');
 const expensesStatusNode = document.querySelector('.cost-status-js');
 
-
 addExpensesBtnNode.addEventListener('click', function() {
     // 2.Получаем значение из поля ввода
     if (!expensesInputNode.value) {
@@ -44,7 +43,7 @@ function outputNewListExpenses() {
     let expensesListHTML = '';
 
     expenses.forEach(element => {
-        expensesListHTML += `<li class="costs-history__item">${element}</li>`;
+        expensesListHTML += `<li class="costs-history__item">${element} руб.</li>`;
     });
 
     expensesHistoryNode.innerHTML = `
@@ -59,7 +58,7 @@ function checkExpensesLimit() {
         sumExpenses += element;
     });
 
-    allExpensesCounterNode.innerHTML = sumExpenses;
+    allExpensesCounterNode.innerHTML = `${sumExpenses} руб.`;
     let expensesLimit = expensesLimitNode.innerHTML;
     if (expensesLimit >= sumExpenses) { // Проверяем превышен ли лимит или нет
         expensesStatusNode.innerHTML = `<span class="cost-status-good">Все хорошо</span>`;

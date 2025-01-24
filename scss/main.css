@@ -68,7 +68,11 @@ section.input-costs .container .input-costs-inner .add-costs-btn .add-btn button
 
 section.output-section .container .output-section-inner {
   display: flex;
-  gap: 255px;
+  justify-content: space-between;
+  gap: 50px;
+}
+section.output-section .container .output-section-inner .output__left-side {
+  width: 50%;
 }
 section.output-section .container .output-section-inner .output__left-side .costs-limit {
   margin-bottom: 15px;
@@ -99,6 +103,9 @@ section.output-section .container .output-section-inner .output__left-side .cost
 }
 section.output-section .container .output-section-inner .output__left-side .costs__status h2 .cost-status-bed {
   color: red;
+}
+section.output-section .container .output-section-inner .output__right-side {
+  width: 50%;
 }
 section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__title {
   margin-bottom: 20px;

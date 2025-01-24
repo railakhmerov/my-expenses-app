@@ -412,7 +412,7 @@
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 480px) {
     .container {
         width: 100%;
         padding: 0 10px;
@@ -427,7 +427,7 @@
                 .cost-accounting__title {
                     margin-top: 60px;
                     h2 {
-                        font-size: 25px;
+                        font-size: 26px;
                     }
                 }
             }
@@ -443,7 +443,7 @@
                 justify-content: center;
                 .input-costs__input {
                     input {
-                        width: 100%;
+                        max-width: 100%;
                         font-size: 18px;
                     }
                     input::placeholder {
@@ -484,15 +484,16 @@
         .container {
             .output-section-inner {
                 display: flex;
-                justify-content: space-between;
+                gap: 10px;
                 .output__left-side {
+                    width: 60%;
                     .costs-limit {
                         margin-bottom: 15px;
                         .costs-limit__title {
                             h2 {
-                                font-size: 18px;
+                                font-size: 20px;
                                 span.costs-limit {
-                                    font-size: 18px;
+                                    font-size: 20px;
                                 }
                             }
                         }
@@ -501,18 +502,18 @@
                         margin-bottom: 35px;
                         .costs-all__title {
                             h2 {
-                                font-size: 18px;
+                                font-size: 20px;
                                 span.costs-all__counter {
-                                    font-size: 18px;
+                                    font-size: 20px;
                                 }
                             }
                         }
                     }
                     .costs__status {
                         h2 {
-                            font-size: 18px;
+                            font-size: 20px;
                             span.cost-status {
-                                font-size: 18px;
+                                font-size: 20px;
                             }
                             .cost-status-good { // если лимит не превышен
                                 color: green;
@@ -524,10 +525,12 @@
                     }
                 }
                 .output__right-side {
+                    width: 40%;
                     .costs-history {
+                        margin-right: 25px;
                         .costs-history__title {
                             h2 {
-                                font-size: 18px;
+                                font-size: 20px;
                             }
                         }
                         .costs-history__items {
@@ -536,7 +539,7 @@
                                 position: absolute;
                                 left: 18px;
                                 li {
-                                    font-size: 16px;
+                                    font-size: 18px;
                                 }
                             }
                         }

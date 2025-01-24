@@ -326,7 +326,7 @@
     font-size: 18px;
   }
 }
-@media (max-width: 540px) {
+@media (max-width: 480px) {
   .container {
     width: 100%;
     padding: 0 10px;
@@ -342,7 +342,7 @@
     margin-top: 60px;
   }
   section.cost-accounting .container .cost-accounting-inner .cost-accounting__title h2 {
-    font-size: 25px;
+    font-size: 26px;
   }
   section.input-costs {
     margin-bottom: 50px;
@@ -353,7 +353,7 @@
     justify-content: center;
   }
   section.input-costs .container .input-costs-inner .input-costs__input input {
-    width: 100%;
+    max-width: 100%;
     font-size: 18px;
   }
   section.input-costs .container .input-costs-inner .input-costs__input input::-moz-placeholder {
@@ -387,31 +387,34 @@
   }
   section.output-section .container .output-section-inner {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+  }
+  section.output-section .container .output-section-inner .output__left-side {
+    width: 60%;
   }
   section.output-section .container .output-section-inner .output__left-side .costs-limit {
     margin-bottom: 15px;
   }
   section.output-section .container .output-section-inner .output__left-side .costs-limit .costs-limit__title h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
   section.output-section .container .output-section-inner .output__left-side .costs-limit .costs-limit__title h2 span.costs-limit {
-    font-size: 18px;
+    font-size: 20px;
   }
   section.output-section .container .output-section-inner .output__left-side .costs-all {
     margin-bottom: 35px;
   }
   section.output-section .container .output-section-inner .output__left-side .costs-all .costs-all__title h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
   section.output-section .container .output-section-inner .output__left-side .costs-all .costs-all__title h2 span.costs-all__counter {
-    font-size: 18px;
+    font-size: 20px;
   }
   section.output-section .container .output-section-inner .output__left-side .costs__status h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
   section.output-section .container .output-section-inner .output__left-side .costs__status h2 span.cost-status {
-    font-size: 18px;
+    font-size: 20px;
   }
   section.output-section .container .output-section-inner .output__left-side .costs__status h2 .cost-status-good {
     color: green;
@@ -419,8 +422,14 @@
   section.output-section .container .output-section-inner .output__left-side .costs__status h2 .cost-status-bed {
     color: red;
   }
+  section.output-section .container .output-section-inner .output__right-side {
+    width: 40%;
+  }
+  section.output-section .container .output-section-inner .output__right-side .costs-history {
+    margin-right: 25px;
+  }
   section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__title h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
   section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__items {
     position: relative;
@@ -430,6 +439,6 @@
     left: 18px;
   }
   section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__items ol li {
-    font-size: 16px;
+    font-size: 18px;
   }
 }/*# sourceMappingURL=media.css.map */
