@@ -1,3 +1,5 @@
+const EXPENSES_LIMIT = 10_000;
+
 const expenses = []; // массив расходов
 
 const expensesInputNode = document.querySelector('.input-cost-js');
@@ -7,6 +9,8 @@ const expensesHistoryNode = document.querySelector('.costs-history__items-js');
 const expensesLimitNode = document.querySelector('.costs-limit-js');
 const allExpensesCounterNode = document.querySelector('.costs-all__counter-js');
 const expensesStatusNode = document.querySelector('.cost-status-js');
+
+expensesLimitNode.innerHTML = EXPENSES_LIMIT; // задаем лимит
 
 addExpensesBtnNode.addEventListener('click', function() {
     // 2.Получаем значение из поля ввода
@@ -59,10 +63,8 @@ function checkExpensesLimit() {
     });
 
     allExpensesCounterNode.innerHTML = `${sumExpenses} руб.`;
-    let expensesLimit = expensesLimitNode.innerHTML;
-    if (expensesLimit >= sumExpenses) { // Проверяем превышен ли лимит или нет
-        expensesStatusNode.innerHTML = `<span class="cost-status-good">Все хорошо</span>`;
-        console.log("Все хорошо");
+    if (EXPENSES_LIMIT >= sumExpenses) { // Проверяем превышен ли лимит или нет
+        console.log("Вы в лимите");
     } else {
         expensesStatusNode.innerHTML = `<span class="cost-status-bed">Лимит превышен</span>`;
         console.log("Лимит превышен");

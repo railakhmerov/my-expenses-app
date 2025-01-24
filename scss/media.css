@@ -69,9 +69,6 @@
   section.output-section .container .output-section-inner .output__left-side .costs-limit .costs-limit__title h2 span.costs-limit {
     font-weight: 400;
   }
-  section.output-section .container .output-section-inner .output__left-side .costs-all {
-    margin-bottom: 35px;
-  }
   section.output-section .container .output-section-inner .output__left-side .costs-all .costs-all__title h2 {
     font-size: 22px;
     font-weight: 600;
@@ -134,9 +131,6 @@
     flex-direction: column;
     justify-content: center;
   }
-  section.input-costs .container .input-costs-inner .input-costs__input {
-    margin-bottom: 15px;
-  }
   section.input-costs .container .input-costs-inner .input-costs__input input {
     min-width: 100%;
     font-size: 18px;
@@ -182,7 +176,7 @@
     font-size: 22px;
   }
   section.output-section .container .output-section-inner .output__left-side .costs-all {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
   }
   section.output-section .container .output-section-inner .output__left-side .costs-all .costs-all__title h2 {
     font-size: 22px;
@@ -288,9 +282,6 @@
   section.output-section .container .output-section-inner .output__left-side .costs-limit .costs-limit__title h2 span.costs-limit {
     font-size: 20px;
   }
-  section.output-section .container .output-section-inner .output__left-side .costs-all {
-    margin-bottom: 35px;
-  }
   section.output-section .container .output-section-inner .output__left-side .costs-all .costs-all__title h2 {
     font-size: 20px;
   }
@@ -386,11 +377,11 @@
     font-size: 18px;
   }
   section.output-section .container .output-section-inner {
-    display: flex;
-    gap: 10px;
+    display: block;
   }
   section.output-section .container .output-section-inner .output__left-side {
-    width: 60%;
+    margin-bottom: 35px;
+    width: 100%;
   }
   section.output-section .container .output-section-inner .output__left-side .costs-limit {
     margin-bottom: 15px;
@@ -400,9 +391,6 @@
   }
   section.output-section .container .output-section-inner .output__left-side .costs-limit .costs-limit__title h2 span.costs-limit {
     font-size: 20px;
-  }
-  section.output-section .container .output-section-inner .output__left-side .costs-all {
-    margin-bottom: 35px;
   }
   section.output-section .container .output-section-inner .output__left-side .costs-all .costs-all__title h2 {
     font-size: 20px;
@@ -423,12 +411,13 @@
     color: red;
   }
   section.output-section .container .output-section-inner .output__right-side {
-    width: 40%;
+    width: 100%;
   }
   section.output-section .container .output-section-inner .output__right-side .costs-history {
     margin-right: 25px;
   }
   section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__title h2 {
+    text-align: center;
     font-size: 20px;
   }
   section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__items {

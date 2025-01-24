@@ -83,7 +83,6 @@
                         }
                     }
                     .costs-all {
-                        margin-bottom: 35px;
                         .costs-all__title {
                             h2 {
                                 font-size: 22px;
@@ -167,7 +166,6 @@
                 flex-direction: column;
                 justify-content: center;
                 .input-costs__input {
-                    margin-bottom: 15px;
                     input {
                         min-width: 100%;
                         font-size: 18px;
@@ -224,7 +222,7 @@
                         }
                     }
                     .costs-all {
-                        margin-bottom: 35px;
+                        margin-bottom: 15px;
                         .costs-all__title {
                             h2 {
                                 font-size: 22px;
@@ -362,7 +360,6 @@
                         }
                     }
                     .costs-all {
-                        margin-bottom: 35px;
                         .costs-all__title {
                             h2 {
                                 font-size: 20px;
@@ -483,10 +480,10 @@
     section.output-section {
         .container {
             .output-section-inner {
-                display: flex;
-                gap: 10px;
+                display: block;
                 .output__left-side {
-                    width: 60%;
+                    margin-bottom: 35px;
+                    width: 100%;
                     .costs-limit {
                         margin-bottom: 15px;
                         .costs-limit__title {
@@ -499,7 +496,6 @@
                         }
                     }
                     .costs-all {
-                        margin-bottom: 35px;
                         .costs-all__title {
                             h2 {
                                 font-size: 20px;
@@ -525,11 +521,12 @@
                     }
                 }
                 .output__right-side {
-                    width: 40%;
+                    width: 100%;
                     .costs-history {
                         margin-right: 25px;
                         .costs-history__title {
                             h2 {
+                                text-align: center;
                                 font-size: 20px;
                             }
                         }
