@@ -1,3 +1,8 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
 .container {
   width: 650px;
   margin: 0 auto;
@@ -67,6 +72,7 @@ section.input-costs .container .input-costs-inner .add-costs-btn .add-btn button
 }
 
 section.output-section .container .output-section-inner {
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
   gap: 50px;
@@ -84,6 +90,22 @@ section.output-section .container .output-section-inner .output__left-side .cost
 section.output-section .container .output-section-inner .output__left-side .costs-limit .costs-limit__title h2 span.costs-limit {
   font-weight: 400;
 }
+section.output-section .container .output-section-inner .output__left-side .costs-limit .costs-limit-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+section.output-section .container .output-section-inner .output__left-side .costs-limit .popup-limit {
+  margin-left: 5px;
+}
+section.output-section .container .output-section-inner .output__left-side .costs-limit .popup-limit button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+}
+section.output-section .container .output-section-inner .output__left-side .costs-limit .popup-limit button img {
+  width: 100%;
+}
 section.output-section .container .output-section-inner .output__left-side .costs-all {
   margin-bottom: 15px;
 }
@@ -94,6 +116,9 @@ section.output-section .container .output-section-inner .output__left-side .cost
 section.output-section .container .output-section-inner .output__left-side .costs-all .costs-all__title h2 span.costs-all__counter {
   font-weight: 400;
 }
+section.output-section .container .output-section-inner .output__left-side .costs__status {
+  margin-bottom: 30px;
+}
 section.output-section .container .output-section-inner .output__left-side .costs__status h2 {
   font-size: 22px;
   font-weight: 600;
@@ -103,6 +128,17 @@ section.output-section .container .output-section-inner .output__left-side .cost
 }
 section.output-section .container .output-section-inner .output__left-side .costs__status h2 .cost-status-bed {
   color: red;
+}
+section.output-section .container .output-section-inner .output__left-side .clear-btn-section-inner .clear-expenses__btn {
+  width: 100%;
+}
+section.output-section .container .output-section-inner .output__left-side .clear-btn-section-inner .clear-expenses__btn button {
+  width: 100%;
+  padding: 10px 10px;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF0000;
 }
 section.output-section .container .output-section-inner .output__right-side {
   width: 50%;
@@ -124,4 +160,107 @@ section.output-section .container .output-section-inner .output__right-side .cos
 section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__items ol li {
   font-size: 20px;
   list-style: decimal;
+}
+
+@keyframes display-popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.body_fixed {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  animation: display-popup 0.5s forwards;
+}
+.popup .popup__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 980px;
+  max-height: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.popup .popup__container .popup-inner {
+  width: 100%;
+  height: 520px;
+  margin: 0 auto;
+}
+.popup .popup__container .popup-inner .popup__title {
+  margin: 80px 0 150px 80px;
+}
+.popup .popup__container .popup-inner .popup__title h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #000;
+}
+.popup .popup__container .popup-inner .popup__main-content {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+.popup .popup__container .popup-inner .popup__main-content .popup__input {
+  padding: 0 20px;
+  height: 45px;
+}
+.popup .popup__container .popup-inner .popup__main-content .popup__input input {
+  padding-left: 25px;
+  position: relative;
+  height: 100%;
+  width: 400px;
+  font-size: 18px;
+  border: 1px solid #000;
+}
+.popup .popup__container .popup-inner .popup__main-content .popup__input input::-moz-placeholder {
+  position: absolute;
+  right: 25px;
+}
+.popup .popup__container .popup-inner .popup__main-content .popup__input input::placeholder {
+  position: absolute;
+  right: 25px;
+}
+.popup .popup__container .popup-inner .popup__main-content .popup__input input:focus, .popup .popup__container .popup-inner .popup__main-content .popup__input :active {
+  outline: none;
+}
+.popup .popup__container .popup-inner .popup__main-content .popup__add-limit_btn {
+  padding: 0 20px;
+  width: 100%;
+}
+.popup .popup__container .popup-inner .popup__main-content .popup__add-limit_btn button {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  background-color: #0094FF;
+}
+.popup .popup__container .popup-inner .popup__close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+.popup .popup__container .popup-inner .popup__close-btn button {
+  border: none;
+  background-color: transparent;
+}
+.popup .popup__container .popup-inner .popup__close-btn button img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

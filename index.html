@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,77 +8,106 @@
     <link rel="stylesheet" href="scss/media.css">
     <title>Expenses App</title>
 </head>
-<body>
+<body class="popup-body">
     <div class="wrapper">
-
-
-
-
-        <section class="cost-accounting">
-            <div class="container">
-                <div class="cost-accounting-inner">
-                    <div class="cost-accounting__title">
-                        <h2>Учет расходов</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="input-costs">
-            <div class="container">
-                <div class="input-costs-inner">
-                    <div class="input-costs__input">
-                        <input 
-                        class="input-cost-js" 
-                        type="number"
-                        placeholder="руб.">
-
-                        <div class="input-error-text hidden-text input-error-text-js">
-                            <p>Вы не ввели число!</p>
-                        </div>
-                    </div>
-                    <div class="add-costs-btn">
-                        <div class="add-btn">
-                            <button class="add-costs-btn-js">Добавить</button>
+        <div class="expenses">
+            <section class="cost-accounting">
+                <div class="container">
+                    <div class="cost-accounting-inner">
+                        <div class="cost-accounting__title">
+                            <h2>Учет расходов</h2>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="output-section">
-            <div class="container">
-                <div class="output-section-inner">
-                    <div class="output__left-side">
-                        <div class="costs-limit">
-                            <div class="costs-limit__title">
-                                <h2>Лимит: <span class="costs-limit costs-limit-js">5000 </span><span class="costs-limit">руб.</span></h2>
+            </section>
+            <section class="input-costs">
+                <div class="container">
+                    <div class="input-costs-inner">
+                        <div class="input-costs__input">
+                            <input
+                            class="input-cost-js input-placeholder" 
+                            type="number"
+                            placeholder="руб.">
+
+                            <div class="input-error-text hidden-text input-error-text-js">
+                                <p>Вы не ввели число!</p>
                             </div>
                         </div>
-                        <div class="costs-all">
-                            <div class="costs-all__title">
-                                <!-- Считает сумму всех трат из истории и выводит в этот блок -->
-                                <h2>Всего: <span class="costs-all__counter costs-all__counter-js">0</span></h2>
+                        <div class="add-costs-btn">
+                            <div class="add-btn">
+                                <button class="add-costs-btn-js">Добавить</button>
                             </div>
-                        </div>
-                        <div class="costs__status">
-                            <h2>Статус: <span class="cost-status cost-status-good cost-status-js">Вы в лимите</span></h2>
                         </div>
                     </div>
-                    <div class="output__right-side">
-                        <div class="costs-history">
-                            <div class="costs-history__title">
-                                <h2>История:</h2>
+                </div>
+            </section>
+            <section class="output-section">
+                <div class="container">
+                    <div class="output-section-inner">
+                        <div class="output__left-side">
+                            <div class="costs-limit">
+                                <div class="costs-limit__title costs-limit-group">
+                                    <h2>Лимит: <span class="costs-limit costs-limit-js"></span><span class="costs-limit"></span></h2>
+                                    <div class="popup-limit">
+                                        <button class="popup-btn-js">
+                                            <img src="img/popup-icon.svg" width="30px" height="30px" alt="кнопка открытия popup окна">
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="costs-history__items costs-history__items-js"></div> <!--Сюда добавляется история трат через js-->
+                            <div class="costs-all">
+                                <div class="costs-all__title">
+                                    <!-- Считает сумму всех трат из истории и выводит в этот блок -->
+                                    <h2>Всего: <span class="costs-all__counter costs-all__counter-js"></span></h2> <!--Сюда добавляется сумма расходов-->
+                                </div>
+                            </div>
+                            <div class="costs__status">
+                                <h2>Статус: <span class="cost-status cost-status-good cost-status-js"></span></h2> <!--Сюда добавляется статус расходов-->
+                            </div>
+                            <div class="clear-btn-section-inner">
+                                <div class="clear-expenses__btn">
+                                    <button class="clear-expenses-btn-js">Сбросить расходы</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="output__right-side">
+                            <div class="costs-history">
+                                <div class="costs-history__title">
+                                    <h2>История:</h2>
+                                </div>
+                                <div class="costs-history__items costs-history__items-js"></div> <!--Сюда добавляется история трат через js-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="popup popup-js">
+                <div class="popup__container">
+                    <div class="popup-inner">
+                        <div class="popup__title">
+                            <h2>Новый лимит</h2>
+                        </div>
+                        <div class="popup__main-content">
+                            <div class="popup__input">
+                                <input 
+                                class="input-popup"
+                                type="text"
+                                placeholder="руб.">
+                            </div>
+                            <div class="popup__add-limit_btn">
+                                <button class="add-limit__popup-btn">Задать лимит</button>
+                            </div>
+                        </div>
+                        <div class="popup__close-btn">
+                            <button class="close-btn">
+                                <img src="img/popup__close-btn.svg" alt="close-btn">
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-
-
-
-
+        </div>
     </div>
 
     <script src="js/main.js"></script>

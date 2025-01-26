@@ -1,3 +1,68 @@
+@media (max-width: 768px) {
+  .popup .popup__container .popup-inner {
+    width: 100%;
+    height: 520px;
+    margin: 0 auto;
+  }
+  .popup .popup__container .popup-inner .popup__title {
+    margin: 80px 0 150px 80px;
+  }
+  .popup .popup__container .popup-inner .popup__title h2 {
+    font-size: 30px;
+  }
+  .popup .popup__container .popup-inner .popup__main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .popup .popup__container .popup-inner .popup__main-content .popup__input {
+    padding: 0 20px;
+    width: 100%;
+    height: 45px;
+  }
+  .popup .popup__container .popup-inner .popup__main-content .popup__input input {
+    padding-left: 25px;
+    position: relative;
+    width: 100%;
+  }
+  .popup .popup__container .popup-inner .popup__main-content .popup__input input::-moz-placeholder {
+    position: absolute;
+    right: 25px;
+  }
+  .popup .popup__container .popup-inner .popup__main-content .popup__input input::placeholder {
+    position: absolute;
+    right: 25px;
+  }
+  .popup .popup__container .popup-inner .popup__main-content .popup__input input:focus, .popup .popup__container .popup-inner .popup__main-content .popup__input :active {
+    outline: none;
+  }
+  .popup .popup__container .popup-inner .popup__main-content .popup__add-limit_btn {
+    padding: 0 20px;
+    width: 100%;
+  }
+  .popup .popup__container .popup-inner .popup__main-content .popup__add-limit_btn button {
+    padding: 12px;
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    background-color: #0094FF;
+  }
+  .popup .popup__container .popup-inner .popup__close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+  .popup .popup__container .popup-inner .popup__close-btn button {
+    border: none;
+    background-color: transparent;
+  }
+  .popup .popup__container .popup-inner .popup__close-btn button img {
+    width: 100%;
+  }
+}
 @media (max-width: 700px) {
   .container {
     width: 100%;
@@ -315,6 +380,28 @@
   }
   section.output-section .container .output-section-inner .output__right-side .costs-history .costs-history__items ol li {
     font-size: 18px;
+  }
+  .popup .popup__container .popup-inner {
+    width: 100%;
+    height: 520px;
+    margin: 0 auto;
+  }
+  .popup .popup__container .popup-inner .popup__title {
+    margin: 80px 0 150px 30px;
+  }
+  .popup .popup__container .popup-inner .popup__title h2 {
+    font-size: 28px;
+  }
+  .popup .popup__container .popup-inner .popup__main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .popup .popup__container .popup-inner .popup__close-btn button img {
+    width: 25px;
+    height: 25px;
   }
 }
 @media (max-width: 480px) {
