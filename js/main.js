@@ -9,6 +9,7 @@ let MINUS_EXPENSES = 0;
 
 const expensesInputNode = document.querySelector('.input-cost-js');
 const inputErrorTextNode = document.querySelector('.input-error-text-js');
+const popupInputErrorTextNode = document.querySelector('.popup__input-error-text-js');
 const addExpensesBtnNode = document.querySelector('.add-costs-btn-js');
 const expensesHistoryNode = document.querySelector('.costs-history__items-js');
 const expensesLimitNode = document.querySelector('.costs-limit-js');
@@ -18,7 +19,7 @@ const clearExpensesBtnNode = document.querySelector('.clear-expenses-btn-js');
 const limitPopupNode = document.querySelector('.popup-btn-js');
 const displayPopupNode = document.querySelector('.popup-js');
 const popupCloseBtn = document.querySelector('.close-btn');
-const popupInputNode = document.querySelector('.input-popup');
+const popupExpensesInputNode = document.querySelector('.input-popup');
 const popupAddLimitNode = document.querySelector('.add-limit__popup-btn');
 
 const expenses = []; // массив расходов
@@ -67,11 +68,17 @@ popupCloseBtn.addEventListener('click', function() {
 });
 
 popupAddLimitNode.addEventListener('click', function() {
-    EXPENSES_LIMIT = popupInputNode.value;
+    const limit = getExpenseLimitFromUser();
+
+    if (!limit) {
+        return;
+    }
+
+    EXPENSES_LIMIT = popupExpensesInputNode.value;
     expensesLimitNode.innerHTML = `${EXPENSES_LIMIT} ${CURRENCY}`;
-    popupInputNode.value = '';
+    popupExpensesInputNode.value = '';
     checkExpensesLimit();
-    closePopup();
+    // closePopup();
 });
 
 function openPopup() {
@@ -98,6 +105,19 @@ function getExpenseFromUser() {
     };
 
     const expense = parseInt(expensesInputNode.value); //parseInt - конвертирует строку в число
+
+    return expense;
+};
+function getExpenseLimitFromUser() {
+    if (!popupExpensesInputNode.value || popupExpensesInputNode.value[0] == 0) {
+        popupInputErrorTextNode.classList.remove('hidden-text'); // убираем класс и появляется текст
+        console.log("Вы не ввели число!");
+        return;
+    } else {
+        popupInputErrorTextNode.classList.add('hidden-text'); // если user ввел число, то текст скрыт
+    };
+
+    const expense = parseInt(popupExpensesInputNode.value); //parseInt - конвертирует строку в число
 
     return expense;
 };

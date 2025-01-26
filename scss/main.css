@@ -215,9 +215,9 @@ section.output-section .container .output-section-inner .output__right-side .cos
   display: flex;
   gap: 10px;
   justify-content: space-around;
-  align-items: center;
 }
 .popup .popup__container .popup-inner .popup__main-content .popup__input {
+  margin-bottom: 10px;
   padding: 0 20px;
   height: 45px;
 }
@@ -239,6 +239,13 @@ section.output-section .container .output-section-inner .output__right-side .cos
 }
 .popup .popup__container .popup-inner .popup__main-content .popup__input input:focus, .popup .popup__container .popup-inner .popup__main-content .popup__input :active {
   outline: none;
+}
+.popup .popup__container .popup-inner .popup__main-content .popup__input .popup__input-error-text p {
+  position: absolute;
+  color: red;
+}
+.popup .popup__container .popup-inner .popup__main-content .popup__input .hidden-text {
+  display: none;
 }
 .popup .popup__container .popup-inner .popup__main-content .popup__add-limit_btn {
   padding: 0 20px;
