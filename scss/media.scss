@@ -233,7 +233,7 @@
                 justify-content: center;
                 .input-costs__input {
                     input {
-                        min-width: 100%;
+                        width: 100%;
                         font-size: 18px;
                     }
                     input::placeholder {
@@ -255,6 +255,12 @@
                     .hidden-text {
                         display: none;
                         margin-bottom: 10px;
+                    }
+
+                    select.input-categories {
+                        width: 100%;
+                        font-size: 18px;
+                        option {}
                     }
                 }
                 .add-costs-btn {

@@ -197,7 +197,7 @@
     justify-content: center;
   }
   section.input-costs .container .input-costs-inner .input-costs__input input {
-    min-width: 100%;
+    width: 100%;
     font-size: 18px;
   }
   section.input-costs .container .input-costs-inner .input-costs__input input::-moz-placeholder {
@@ -221,6 +221,10 @@
   section.input-costs .container .input-costs-inner .input-costs__input .hidden-text {
     display: none;
     margin-bottom: 10px;
+  }
+  section.input-costs .container .input-costs-inner .input-costs__input select.input-categories {
+    width: 100%;
+    font-size: 18px;
   }
   section.input-costs .container .input-costs-inner .add-costs-btn .add-btn {
     height: 45px;

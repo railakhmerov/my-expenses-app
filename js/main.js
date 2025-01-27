@@ -6,8 +6,10 @@ const STATUS_OUT_OF_LIMIT = "Лимит превышен";
 let EXPENSES_LIMIT = 0;
 let SUM_EXPENSES = 0;
 let MINUS_EXPENSES = 0;
+let currentCategory = '';
 
 const expensesInputNode = document.querySelector('.input-cost-js');
+const inputCategoriesNode = document.querySelector('.input-categories-js');
 const inputErrorTextNode = document.querySelector('.input-error-text-js');
 const popupInputErrorTextNode = document.querySelector('.popup__input-error-text-js');
 const addExpensesBtnNode = document.querySelector('.add-costs-btn-js');
@@ -23,7 +25,6 @@ const popupExpensesInputNode = document.querySelector('.input-popup');
 const popupAddLimitNode = document.querySelector('.add-limit__popup-btn');
 
 const expenses = []; // массив расходов
-
 
 initialValue(); // изначальные значения на сайте
 
@@ -50,6 +51,10 @@ addExpensesBtnNode.addEventListener('click', function() {
 
     // 7. Проверяет на превышение лимита
     checkExpensesLimit();
+
+    // 8. Отображаем категорию трат
+    currentCategory = inputCategoriesNode.value;
+    console.log(currentCategory);
 });
 
 clearExpensesBtnNode.addEventListener('click', function() { // Кнопка сброса расходов
@@ -78,7 +83,7 @@ popupAddLimitNode.addEventListener('click', function() {
     expensesLimitNode.innerHTML = `${EXPENSES_LIMIT} ${CURRENCY}`;
     popupExpensesInputNode.value = '';
     checkExpensesLimit();
-    // closePopup();
+    closePopup();
 });
 
 function openPopup() {
@@ -98,7 +103,6 @@ function initialValue() {
 function getExpenseFromUser() {
     if (!expensesInputNode.value || expensesInputNode.value[0] == 0) {
         inputErrorTextNode.classList.remove('hidden-text'); // убираем класс и появляется текст
-        console.log("Вы не ввели число!");
         return;
     } else {
         inputErrorTextNode.classList.add('hidden-text'); // если user ввел число, то текст скрыт
@@ -111,7 +115,6 @@ function getExpenseFromUser() {
 function getExpenseLimitFromUser() {
     if (!popupExpensesInputNode.value || popupExpensesInputNode.value[0] == 0) {
         popupInputErrorTextNode.classList.remove('hidden-text'); // убираем класс и появляется текст
-        console.log("Вы не ввели число!");
         return;
     } else {
         popupInputErrorTextNode.classList.add('hidden-text'); // если user ввел число, то текст скрыт
@@ -131,11 +134,18 @@ function clearInput() {
     expensesInputNode.value = ''; // после ввода числа мы сбрасываем прошлоее значение в поле ввода
 };
 
+// function getCategoriesFromInput() { // получаем категорию трат
+//     const categoriesValue = inputCategoriesNode.value;
+//     console.log(categoriesValue);
+
+//     return categoriesValue;
+// }
+
 function outputNewListExpenses() {
     let expensesListHTML = '';
 
     expenses.forEach(element => {
-        expensesListHTML += `<li class="costs-history__item">${element} ${CURRENCY}</li>`;
+        expensesListHTML += `<li class="costs-history__item">${element} ${CURRENCY} - ${currentCategory}</li>`;
     });
 
     expensesHistoryNode.innerHTML = `
@@ -166,9 +176,7 @@ function checkExpensesLimit() { // Проверяем превышен ли ли
     allExpensesCounterNode.innerHTML = `${SUM_EXPENSES} ${CURRENCY}`;
     if (EXPENSES_LIMIT >= SUM_EXPENSES) {
         expensesStatusNode.innerHTML = `<span class="cost-status-good">${STATUS_IN_LIMIT}</span>`;
-        console.log(STATUS_IN_LIMIT);
     } else {
         expensesStatusNode.innerHTML = `<span class="cost-status-bed">${STATUS_OUT_OF_LIMIT} (${calcResult} ${CURRENCY})</span>`;
-        console.log(STATUS_OUT_OF_LIMIT);
     };
 };

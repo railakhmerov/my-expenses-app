@@ -29,11 +29,13 @@ section.input-costs {
             display: flex;
             gap: 10px;
             .input-costs__input {
-                height: 45px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
                 input {
                     padding-left: 25px;
                     position: relative;
-                    height: 100%;
+                    height: 45px;
                     width: 400px;
                     font-size: 20px;
                 }
@@ -46,6 +48,7 @@ section.input-costs {
                 }
 
                 .input-error-text { // Текст, если пользователь ничего не введет в поле ввода
+                    margin-bottom: 10px;
                     p {
                         position: absolute;
                         color: red;
@@ -53,6 +56,15 @@ section.input-costs {
                 }
                 .hidden-text {
                     display: none;
+                }
+
+                select.input-categories {
+                    padding-left: 25px;
+                    position: relative;
+                    height: 45px;
+                    width: 400px;
+                    font-size: 20px;
+                    option {}
                 }
             }
             .add-costs-btn {
