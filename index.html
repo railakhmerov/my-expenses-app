@@ -34,13 +34,19 @@
                             </div>
 
                             <select id="input-categories" class="input-categories input-categories-js">
-                                <option value="Категории">Категории</option>
+                                <option hidden="" disabled="" selected="" value="Категории">
+                                    Категории
+                                </option>
                                 <option value="Продукты">Продукты</option>
                                 <option value="Кафе и рестораны">Кафе и рестораны</option>
                                 <option value="Аптека">Аптека</option>
                                 <option value="Транспорт">Транспорт</option>
                                 <option value="Развлечения">Развлечения</option>
                             </select>
+
+                            <div class="input-error-category-text hidden-text input-error-category-text-js">
+                                <p>Вы не выбрали категорию!</p>
+                            </div>
                         </div>
                         <div class="add-costs-btn">
                             <div class="add-btn">

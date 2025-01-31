@@ -3,14 +3,15 @@ const BODY_FIXED = document.querySelector('.popup-body');
 const CURRENCY = "руб." // валюта
 const STATUS_IN_LIMIT = "Вы в лимите";
 const STATUS_OUT_OF_LIMIT = "Лимит превышен";
-let EXPENSES_LIMIT = 0;
+let EXPENSES_LIMIT = 1000;
 let SUM_EXPENSES = 0;
 let MINUS_EXPENSES = 0;
 let currentCategory = '';
 
 const expensesInputNode = document.querySelector('.input-cost-js');
-const inputCategoriesNode = document.querySelector('.input-categories-js');
 const inputErrorTextNode = document.querySelector('.input-error-text-js');
+const inputCategoriesNode = document.querySelector('.input-categories-js');
+const inputCategoryErrorTextNode = document.querySelector('.input-error-category-text-js');
 const popupInputErrorTextNode = document.querySelector('.popup__input-error-text-js');
 const addExpensesBtnNode = document.querySelector('.add-costs-btn-js');
 const expensesHistoryNode = document.querySelector('.costs-history__items-js');
@@ -28,33 +29,51 @@ const expenses = []; // массив расходов
 
 initialValue(); // изначальные значения на сайте
 
+// ОБРАБОТЧИКИ СОБЫТИЙ -------------------------------------------------------
+
 addExpensesBtnNode.addEventListener('click', function() {
     // 1.Получаем значение из поля ввода
-    const expense = getExpenseFromUser(); // записываем в переменную полученное значение expense из функции
+    const currentAmount = getExpenseFromUser(); // записываем в переменную полученное значение expense из функции
 
     // 2.Проверяем полученное значение из input
-    if (!expense) {
+    if (!currentAmount) {
         return;
-    }
+    };
 
-    // 3.Сохраняем полученное значение в массив
-    saveValueFromInputInArray(expense);
+    // Проверка на выбор категории
+    currentCategory = inputCategoriesNode.value;
+    if (currentCategory === "Категории") {
+        inputCategoryErrorTextNode.classList.remove('hidden-text');
+        console.log("Вы не выбрали категорию");
+        return;
+    };
+
+    const newExpenses = { amount: currentAmount, category: currentCategory };
+
+    // 3.Сохраняем полученное значение
+    saveValueFromInputInArray(newExpenses);
 
     // 4. Чистим input после ввода
     clearInput();
 
     // 5.Выводим новый список трат
+    // currentCategory = inputCategoriesNode.value;
+    // if (currentCategory === "Категории") {
+    //     inputCategoryErrorTextNode.classList.remove('hidden-text');
+    //     console.log("Вы не выбрали категорию");
+    //     return;
+    // } else {
+    //     inputCategoryErrorTextNode.classList.add('hidden-text');
+    //     console.log(currentCategory);
+    // };
+
     outputNewListExpenses();
 
     // 6. Выводить сумму расходов
-    calculateSumExpenses()
+    calculateSumExpenses();
 
     // 7. Проверяет на превышение лимита
     checkExpensesLimit();
-
-    // 8. Отображаем категорию трат
-    currentCategory = inputCategoriesNode.value;
-    console.log(currentCategory);
 });
 
 clearExpensesBtnNode.addEventListener('click', function() { // Кнопка сброса расходов
@@ -65,7 +84,7 @@ clearExpensesBtnNode.addEventListener('click', function() { // Кнопка сб
 })
 
 limitPopupNode.addEventListener('click', function() { // popup
-    openPopup()
+    openPopup();
 });
 
 popupCloseBtn.addEventListener('click', function() {
@@ -77,7 +96,7 @@ popupAddLimitNode.addEventListener('click', function() {
 
     if (!limit) {
         return;
-    }
+    };
 
     EXPENSES_LIMIT = popupExpensesInputNode.value;
     expensesLimitNode.innerHTML = `${EXPENSES_LIMIT} ${CURRENCY}`;
@@ -86,6 +105,9 @@ popupAddLimitNode.addEventListener('click', function() {
     closePopup();
 });
 
+// -------------------------------------------
+
+// ФУНКЦИИ ---------------------------------------
 function openPopup() {
     BODY_FIXED.classList.add('body_fixed'); // чтобы нельзя было нажимать вне popup
     displayPopupNode.setAttribute("style", "display: flex;"); // чтобы появился popup
@@ -125,29 +147,23 @@ function getExpenseLimitFromUser() {
     return expense;
 };
 
-function saveValueFromInputInArray(expense) {
-    expenses.push(expense);
+function saveValueFromInputInArray(newExpenses) {
+    expenses.push(newExpenses);
     console.log(expenses);
 };
 
 function clearInput() {
     expensesInputNode.value = ''; // после ввода числа мы сбрасываем прошлоее значение в поле ввода
-};
-
-// function getCategoriesFromInput() { // получаем категорию трат
-//     const categoriesValue = inputCategoriesNode.value;
-//     console.log(categoriesValue);
-
-//     return categoriesValue;
-// }
+}
 
 function outputNewListExpenses() {
     let expensesListHTML = '';
 
-    expenses.forEach(element => {
-        expensesListHTML += `<li class="costs-history__item">${element} ${CURRENCY} - ${currentCategory}</li>`;
+    expenses.forEach(expense => {
+        console.log(expense)
+        expensesListHTML += `<li class="costs-history__item">${expense.amount} ${CURRENCY} - ${expense.category}</li>`;
     });
-
+    
     expensesHistoryNode.innerHTML = `
         <ol class="costs-history__item">${expensesListHTML}</ol>
     `;
@@ -156,8 +172,8 @@ function outputNewListExpenses() {
 function calculateSumExpenses() {
     let sumExpenses = 0;
 
-    expenses.forEach(element => {
-        sumExpenses += element;
+    expenses.forEach(expense => {
+        sumExpenses += expense.amount;
     });
 
     return sumExpenses;
@@ -180,3 +196,5 @@ function checkExpensesLimit() { // Проверяем превышен ли ли
         expensesStatusNode.innerHTML = `<span class="cost-status-bed">${STATUS_OUT_OF_LIMIT} (${calcResult} ${CURRENCY})</span>`;
     };
 };
+
+// ---------------------------------------

@@ -67,6 +67,13 @@ section.input-costs .container .input-costs-inner .input-costs__input select.inp
   width: 400px;
   font-size: 20px;
 }
+section.input-costs .container .input-costs-inner .input-costs__input .input-error-category-text {
+  margin-bottom: 10px;
+}
+section.input-costs .container .input-costs-inner .input-costs__input .input-error-category-text p {
+  position: absolute;
+  color: red;
+}
 section.input-costs .container .input-costs-inner .add-costs-btn .add-btn {
   height: 45px;
   max-width: 200px;

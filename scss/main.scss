@@ -66,6 +66,14 @@ section.input-costs {
                     font-size: 20px;
                     option {}
                 }
+
+                .input-error-category-text {
+                    margin-bottom: 10px;
+                    p {
+                        position: absolute;
+                        color: red;
+                    }
+                }
             }
             .add-costs-btn {
                 .add-btn {
