@@ -22,7 +22,7 @@ const clearExpensesBtnNode = document.querySelector('.clear-expenses-btn-js');
 const limitPopupNode = document.querySelector('.popup-btn-js');
 const displayPopupNode = document.querySelector('.popup-js');
 const popupCloseBtn = document.querySelector('.close-btn');
-const popupExpensesInputNode = document.querySelector('.input-popup');
+const popupExpensesInputNode = document.querySelector('.input-in-popup-js');
 const popupAddLimitNode = document.querySelector('.add-limit__popup-btn');
 
 const expenses = []; // массив расходов
@@ -46,6 +46,8 @@ addExpensesBtnNode.addEventListener('click', function() {
         inputCategoryErrorTextNode.classList.remove('hidden-text');
         console.log("Вы не выбрали категорию");
         return;
+    } else {
+        inputCategoryErrorTextNode.classList.add('hidden-text');
     };
 
     const newExpenses = { amount: currentAmount, category: currentCategory };
